@@ -45,36 +45,3 @@
     @apply text-sm text-red text-left;
   }
 }
-
-/* 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-:root {
-  --prime: #27aae1;
-  --blue: #1a73e8;
-  --darkblue: #0d336d;
-  --navyblue: #0d336d;
-  --red: #f00;
-  --green: #5ecf80;
-  --highlight: #7563ff;
-  --black-soft: #333;
-}
-
-html {
-  font-family: "Roboto", "Arial", sans-serif;
-}
-
-body {
-  background-color: aliceblue;
-} */

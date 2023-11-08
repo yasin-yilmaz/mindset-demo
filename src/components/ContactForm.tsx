@@ -3,14 +3,19 @@ import { useForm } from "react-hook-form";
 import { TFormData, formSchema } from "../models/formSchema";
 
 import sendMessage from "../models/sendMessage";
-// import "./ContactForm.scss";
+import { useEffect } from "react";
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    reset,
+    formState: { errors, isValid, isSubmitting, isSubmitSuccessful },
   } = useForm<TFormData>({ resolver: zodResolver(formSchema) });
+
+  useEffect(() => {
+    if (isSubmitSuccessful) reset();
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <form
@@ -38,7 +43,7 @@ const ContactForm = () => {
                 Genel
               </label>
             </div>
-            <div className="form__radio-item">
+            <div className="--radio-wrapper">
               <input
                 {...register("subject")}
                 className="form__radio"
@@ -82,8 +87,12 @@ const ContactForm = () => {
           {...register("message")}
           placeholder="Mesaj"
         ></textarea>
-        <button className="--form-button" disabled={!isValid} type="submit">
-          Gönder
+        <button
+          className="--form-button"
+          disabled={!isValid || isSubmitting}
+          type="submit"
+        >
+          {!isSubmitting ? "Gönder" : "Gönderiliyor..."}
         </button>
       </div>
     </form>

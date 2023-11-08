@@ -9,8 +9,8 @@ function App() {
       <ContactForm />
       <ToastContainer
         position="top-center"
-        autoClose={1000}
-        hideProgressBar={true}
+        autoClose={5000}
+        hideProgressBar={false}
         newestOnTop={true}
         closeOnClick
         rtl={false}
@@ -18,7 +18,6 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      <ToastContainer />
     </div>
   );
 }
