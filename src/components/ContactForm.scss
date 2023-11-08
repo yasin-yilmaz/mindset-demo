@@ -1,0 +1,120 @@
+@use "sass:color";
+
+.form {
+  background-color: white;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+
+  &__wrapper {
+    padding: 20px 40px;
+  }
+
+  &__header {
+    background-color: var(--navyblue);
+    color: white;
+    padding: 20px 40px;
+  }
+
+  &__main-head {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &__sub-head {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  fieldset {
+    // border: medium 1px !important;
+    margin: 0 0 0;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+
+    label {
+      margin: 5px;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
+      color: #888;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    padding: 0 0.8rem;
+    height: 2.5rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__input,
+  &__message {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 0.8rem;
+    height: 2.5rem;
+    border: 1px solid var(--black-soft);
+
+    color: #333;
+    background-color: white;
+
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+
+    // transition
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      border-color: var(--highlight);
+    }
+    &:active {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__message {
+    min-height: 7rem;
+    padding-block: 12px;
+  }
+
+  button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: var(--blue);
+    color: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 1rem;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: lighten(#1a73e8, 5);
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+// place-holder
+::-webkit-input-placeholder {
+  color: #888;
+}
+:-moz-placeholder {
+  color: #888;
+}
+::-moz-placeholder {
+  color: #888;
+}
+:-ms-input-placeholder {
+  color: #888;
+}
