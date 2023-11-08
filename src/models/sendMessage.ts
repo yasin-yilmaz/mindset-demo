@@ -10,15 +10,15 @@ const sendMessage = async (url: string, data: TFormData) => {
       signal: controller.signal,
     });
     console.log(result.data);
+    toast.success("message gonderildi", {
+      toastId: "messageSuccess",
+    });
   } catch (err) {
     if (err instanceof AxiosError)
       return toast.error("hata gonderilemedi", {
         toastId: "messageError",
       });
   }
-  toast.success("message gonderildi", {
-    toastId: "messageSuccess",
-  });
 };
 
 export default sendMessage;
