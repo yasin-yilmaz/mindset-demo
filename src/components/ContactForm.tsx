@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { TFormData, formSchema } from "../models/formSchema";
 
 import sendMessage from "../models/sendMessage";
-// import "./ContactForm.scss";
 
 const ContactForm = () => {
   const {

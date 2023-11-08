@@ -18,7 +18,6 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      <ToastContainer />
     </div>
   );
 }
